@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Scenarios for Design, Communication and Specification </title>
+
+		<meta name="author" content="Jan Dittrich">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<!-- <section>
+					<p>
+						Corrected version. <br />
+						If you spot a problem or <br />
+						want to continue the conversation, mail me at:<br />
+						d_ jan AT ymail.com
+					</p>
+					<img class="stretch" src="statistics101/BarCategoriesFlowers.svg">
+					<aside class="notes">
+						5 Years ago...
+						Why: important. Data Science, Big Data. Stat Literacy.
+						Idea: Useful concepts. Helpful warning
+					</aside>
+				</section> -->
+				<section>
+					<h1>Scenarios</h1>
+					<h2>Design, Communication and Specification</h2>
+				</section>
+				<section>
+					<p>
+						Small stories with possible users of your product:
+					</p>
+					<blockquote>
+						<p>A parent is worried about a ten-year old refusing to drink milk and wants to know if it really makes a difference that the child is getting very little calcium. </p>
+						<p><em><a href="https://www.usability.gov/how-to-and-tools/methods/scenarios.html">Scenarios on usability.gov</a>, <a href="https://www.usability.gov/about-us/index.html">under public domain</a></em></p>
+					</blockquote>
+				</section>
+				<section>
+					<h2>Where to use them?</h2>
+					<ul>
+						<li>Communicate assumption: <cite>I assume, it would be used in this way:…</cite></li>
+						<li>Specify: <cite>The following should be possible:…</cite></li>
+						<li>Ideate: <cite>What would happen if wen enable this:…</cite></li>
+					</ul>
+				</section>
+				<section>
+					<h2>The power of gaps</h2>
+					<p>
+						Communicate research – communicate the current state
+					</p>
+					<blockquote>
+						<p>Sam wants to upload a new file so Anna (who works remotely)  can give feedback on his creation. To do that he copies the file to the whatever-folder and adds it to the projects. This sometimes goes wrong: He forgets…</p>
+					</blockquote>
+					<blockquote>
+						<p>Sam wants to upload a new file so Anna (who works remotely)  can give feedback on his creation. <strong>To do that</strong> he copies the file to the whatever-folder and adds it to the projects. This sometimes goes wrong: He forgets…</p>
+					</blockquote>
+				</section>
+				<section>
+					<h2>The power of gaps</h2>
+					<p>
+						Find new solutions based on research  – no solution, but still motivation and activities
+					</p>
+					<blockquote>
+						<p>Sam feels that the draft is in a good stage, but he wants Anna (who works remotely)  to have a look at it, too. After Anna reviewed it, she gives some suggestions on…</p>
+					</blockquote>
+				</section>
+				<section>
+					<h2>Combine with other formats</h2>
+					<blockquote>
+					<p><strong>Intro:</strong> <em>This is a relevant scenario for list generation using utilizing Wikidata since data needs to be complete (at least for a given usecase) to generate a good list from it. Though this is part of creating lists, it happens only on Wikidata and the list creation itself is not part ot this.</em></p>
+					<p><strong>Example scenario:</strong> John notices that his hometown does not have a mayor listed on the hometown’s item. He wants to see which other towns and cities also lack this property and wonders if he could fix it, at least for the places in his county.</p>
+					<p>
+						<strong>Example quote:</strong> “I could quickly find out what I wanted to know and correct the data”
+					</p>
+					<p>
+						<strong>Workflow we assume:</strong>
+					</p>
+					<ol>
+						<li>You “Request a query” or write a query yourself to find to find all places which are municipalities but lack a mayor</li>
+						<li>You find out who the current mayor of every (or some) places is</li>
+						<li>You add that person’s item to the property “head of government” of the city’s item</li>
+						<li>If no item for the major exists, you create the item.</li>
+					</ol>
+					</blockquote>
+				</section>
+				<section>
+					<h2>What makes them suitable as a tool?</h2>
+					<ul>
+						<li><strong>Intuitive</strong></li>
+						<li><strong>Robust</strong></li>
+					</ul>
+
+					<p>
+						In addition, for open source projects in particular
+					</p>
+					<ul>
+						<li><strong>Text based</strong></li>
+						<li><strong>Often no "Watercooler-talk" to align assumptions</strong></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				mouseWheel: true,
+
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
